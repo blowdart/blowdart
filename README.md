@@ -1,16 +1,14 @@
-## Hi there 👋
+# Here lies Barry Dorrans
 
-<!--
-**blowdart/blowdart** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+>[!CAUTION]  
+>Please report security bugs in .NET and other Microsoft projects via https://msrc.microsoft.com/report/
+>
+>Security bugs in .NET reported via MSRC can be eligble for the [.NET Bug Bounty](https://www.microsoft.com/en-us/msrc/bounty-dot-net-core).
 
-Here are some ideas to get you started:
+- 💼 For work I try to keep .NET and its ecosystem secure through design reviews, threat models and other processes.
+- 🏠 Here I write bad code including code for
+  - 🦋 Wrapping AtProto and Bluesky APIs,
+  - 🔐 Authentication middlewares for ASP.NET Core,
+  - 🔓 Examples of insecure code for demonstrations and conferences talks.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+📇 You can reach me on Bluesky as [blowdart.me](https://bsky.app/profile/blowdart.me)
