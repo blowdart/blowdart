@@ -51,7 +51,7 @@ dotnet nuget verify [<package-path(s)>]
 ### Pre-release Publisher Verification
 
 Pre-release builds hosted on [MyGet](https://www.myget.org/gallery/blowdart) are signed with Azure [Artifact Signing](https://azure.microsoft.com/en-us/products/artifact-signing/),
-which uses a short-lived certificate. You can verify that the certificate is issued to "CN=Barry Dorrans, O=Barry Dorrans, L=Bothell, S=Washington, C=US", with a root CA of 
+which uses a short-lived certificate. You can verify that the certificate is issued to "CN=Barry Dorrans, O=Barry Dorrans, L=Bothell, S=Washington, C=US", with a root CA of
 "CN=Microsoft Identity Verification Root Certificate Authority 2020"
 
 To view the full certificate chain in `dotnet nuget verify` use the `-v detailed` option;
