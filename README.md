@@ -1,6 +1,6 @@
-# 🛌 Here lies Barry Dorrans
+# Here lies Barry Dorrans
 
->[!CAUTION]  
+>[!CAUTION]
 >Please report security bugs in .NET and other Microsoft projects via https://msrc.microsoft.com/report/
 >
 >Security bugs in .NET reported via MSRC can be eligble for the [.NET Bug Bounty](https://www.microsoft.com/en-us/msrc/bounty-dot-net-core).
@@ -13,7 +13,7 @@
 
 📇 You can reach me on Bluesky as [blowdart.me](https://bsky.app/profile/blowdart.me)
 
-## ✒️ Code Signing Information
+## Code Signing Information
 
 ### Signing Certificates
 
