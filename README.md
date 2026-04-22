@@ -16,7 +16,9 @@
 
 ## Code Signing Information
 
-### Signing Certificates
+### Release Build Publisher Verification
+
+#### Release Build Signing Certificates
 
 | Valid From | Valid To   | SHA256 Thumbprint                                                | SHA1 Thumbprint |
 |------------|------------|------------------------------------------------------------------|-----------------|
@@ -28,7 +30,7 @@
 | 2019-09-24 | 2020-09-29 | 841FD34A7A26AF8D6F14F996C0F56EAD70EBFE65BF7ECC9AF3CB26D394F6B95F | CD2BD802254E45B37CB281229DF4DF5F7A0BD4B4 |
 | 2018-02-10 | 2019-10-08 | 8263D3A7932B86087290A6F916E4E8BF773B29154285EFFC00A097F400006793 | 46FEDE9825EF9446A6DFD3E4776A2F332432A3F9 |
 
-### Validating .NET assemblies and Windows executables
+#### Validating .NET assemblies and Windows executables
 
 Run the following PowerShell command on Windows to validate the signature of a file. Compare the `SignerCertificate` with the SHA1
 Thumbprint column in above table to ensure it is signed with a valid certificate.
@@ -37,11 +39,23 @@ Thumbprint column in above table to ensure it is signed with a valid certificate
 Get-AuthenticodeSignature [-FilePath]
 ```
 
-### Validating nupkg author signatures
+#### Validating nupkg author signatures
 
 Run the following command on Windows or Linux with a .NET SDK installed to validate the signature of a file. Compare the `SHA256 hash` under
 `Signature Type: Author` with the SHA256 Thumbprint column in above table to ensure it is signed with a valid certificate.
 
 ```powershell
 dotnet nuget verify [<package-path(s)>]
+```
+
+### Pre-release Publisher Verification
+
+Pre-release builds hosted on [MyGet](https://www.myget.org/gallery/blowdart) are signed with Azure [Artifact Signing](https://azure.microsoft.com/en-us/products/artifact-signing/),
+which uses a short-lived certificate. You can verify that the certificate is issued to "CN=Barry Dorrans, O=Barry Dorrans, L=Bothell, S=Washington, C=US", with a root CA of 
+"CN=Microsoft Identity Verification Root Certificate Authority 2020"
+
+To view the full certificate chain in `dotnet nuget verify` use the `-v detailed` option;
+
+```powershell
+dotnet nuget verify [<package-path(s)>] -v detailed
 ```
