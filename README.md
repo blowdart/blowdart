@@ -59,3 +59,37 @@ To view the full certificate chain in `dotnet nuget verify` use the `-v detailed
 ```powershell
 dotnet nuget verify [<package-path(s)>] -v detailed
 ```
+
+## Commit & Tag Signing Information
+
+[.ssh-allowed-signers](.ssh-allowed-signers) contains the SSH public keys trusted for signing commits tags and tags in my repositories.
+
+### Format
+
+```text
+principal key-type public-key-data comment
+```
+
+### Current Trusted Keys
+
+- **<github.com@idunno.org>** - 1password backed signing key
+
+### Verification
+
+To verify tags and commits using this key first download [.ssh-allowed-signers]
+
+```bash
+# Configure Git to use this file
+git config gpg.ssh.allowedSignersFile <path/to/.ssh-allowed-signers>
+
+# Verify a tag
+git verify-tag <tag>
+
+# Verify a commit
+git verify-commit <commit>
+```
+
+### More Info
+
+- [Git SSH Signing Documentation](https://git-scm.com/docs/git-config#Documentation/git-config.txt-gpgsshallowedSignersFile)
+
