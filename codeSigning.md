@@ -1,4 +1,4 @@
-# AUthenticode Signing Certificates
+# Authenticode Signing Certificates
 
 Below is a list of the Authenticode Signing certifcates I have used to sign nupkgs, .NET assemblies and executables.
 
